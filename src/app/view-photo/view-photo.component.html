@@ -1,0 +1,22 @@
+
+<div class="child-page-listing">
+    <h2> Photos</h2>
+    <div class="grid-container">
+
+       <div *ngFor="let image of images">
+           <article class="location-listing">
+        
+            <div class="location-image"><a href="#">
+            <img width="400" height="250" [src]="image.url"></a>
+        </div>
+        <a class="location-title" href="#">
+           {{image.lieu}}
+        </a>
+        <a routerLink="/photos" data-scroll><button (click)='deleteFileUpload(image)' class="btn btn-danger btn-xs" style="float: right" routerLinkActive="active" *ngIf="isAuth">Delete</button></a>
+
+           
+        </article>
+       </div>
+  </div>
+</div>
+

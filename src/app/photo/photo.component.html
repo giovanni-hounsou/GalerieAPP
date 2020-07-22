@@ -1,0 +1,25 @@
+<div id="registration">
+    <h3>Ajouter une photo</h3>
+    <form [formGroup]="this.photoService.form" >
+        <div class ="form-group">
+            &nbsp; &nbsp;   <label for="lieu">Lieu</label>
+            &nbsp; &nbsp;  <input type="text" id="lieu"
+                   class="form-control" formControlName="lieu" placeholder="ville, Pays"
+                   [(ngModel)] ="image.lieu">
+        </div>
+
+<br/>
+        
+        <div class ="form-group">
+            &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <input type="file" id="input" (change)="detectFiles($event)">
+
+    
+</div>
+ 
+    &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<a routerLink="/view" data-scroll><button     (click)="addImage(image)">Ajouter</button></a>
+
+
+
+   
+</form>
+</div>
